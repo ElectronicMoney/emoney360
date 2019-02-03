@@ -12,7 +12,7 @@ class Seller extends User
      * One to many relationship
      * @var true
      */
-    public function rpoducts()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }
