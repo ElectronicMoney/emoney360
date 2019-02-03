@@ -42,18 +42,30 @@ class User extends Authenticatable
         'verification_token',
     ];
 
-    //This method checks if a user is verified
+    /**
+     * Check if a user is verified
+     *
+     * @var bool
+     */
     public function isVerified() {
         return $this->verified = User::VERIFIED_USER;
     }
 
-    //This function check if a user is an admin
+    /**
+     * check if a user is an admin
+     *
+     * @var bool
+     */
     public function isAdmin()
     {
         return $this->admin = User::ADMIN_USER;
     }
 
-    //This function generate verification code
+    /**
+     * generate verification code
+     *
+     * @var string
+     */
     public static function generateVerificationCode()
     {
         return str_random(40);
