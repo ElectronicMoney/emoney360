@@ -43,6 +43,50 @@ class User extends Authenticatable
     ];
 
     /**
+     * Mutators(Setters):
+     * @var setnameAttribute
+     * @param string $name
+     * @return string
+     */
+    public function setNameAttribute($name) {
+        $this->attributes['name'] = strtolower($name);
+    }
+
+
+    /**
+     * Accessors (Getters):
+     * @var getnameAttribute
+     * @param string $name
+     * @return string
+     */
+    public function getNameAttribute($name)
+    {
+        return ucwords($name);
+    }
+
+    /**
+     * Mutators (Setters):
+     * @var setnameAttribute
+     * @param string $name
+     * @return string
+     */
+    public function setEmailAttribute($email)
+    {
+        $this->attributes['email'] = strtolower($email);
+    }
+
+    // /**
+    //  * Accessors (Getters):
+    //  * @var getnameAttribute
+    //  * @param string $name
+    //  * @return string
+    //  */
+    // public function getEmailAttribute($email)
+    // {
+    //     return strtoupper($email);
+    // }
+
+    /**
      * Check if a user is verified
      *
      * @var bool
